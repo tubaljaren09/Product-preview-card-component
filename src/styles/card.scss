@@ -1,0 +1,96 @@
+.card-main {
+  width: 90%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px auto;
+  .hero {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background: url("../images/image-product-mobile.jpg") no-repeat center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .details {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid hsl(30, 38%, 92%);
+    background: hsl(0, 0%, 100%);
+    padding: 20px;
+    .details-container {
+      width: 90%;
+      margin: auto;
+      height: 100%;
+      .perfume {
+        letter-spacing: 5px;
+        margin-bottom: 5px;
+      }
+      h1 {
+        font-family: "Fraunces", serif;
+        margin-bottom: 15px;
+      }
+      p {
+        color: hsl(228, 12%, 48%);
+        font-size: 14px;
+        line-height: 25px;
+      }
+      h2 {
+        color: hsl(158, 36%, 37%);
+        font-size: 30px;
+        font-family: "Fraunces", serif;
+        margin: 20px 0;
+        span {
+          color: hsl(228, 12%, 48%);
+          text-decoration: line-through;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+      button {
+        background: hsl(158, 36%, 37%);
+        width: 100%;
+        padding: 20px;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        font-size: 15px;
+        box-sizing: border-box;
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .card-main {
+    width: 50%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+  }
+  .card-main .hero {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background: url("../images/image-product-desktop.jpg") no-repeat center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: unset;
+  }
+  .card-main .details {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: unset;
+  }
+  .card-main .details .details-container {
+    padding-top: 40px;
+  }
+}
